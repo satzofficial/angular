@@ -1,0 +1,14 @@
+<p>home header works!</p>
+<div [className]="homeComponent">Home Component</div>
+
+<h1 [innerText]="title"></h1>
+{{title}}
+<h2>Property Binding</h2>
+<button class="btn btn-primary" [disabled]="isDisabled">I am disabled</button>
+<div [className]="red">Class Binding</div>
+<div [className]="'red size20'">Test</div>
+<div class="red">Normal red</div>
+<div [className]="getClass()">getClass</div>
+<div [className]="hasError() ? 'true' : 'false'">Condition operetor</div>
+<div ngClass="primary big">Simple Text</div>
+<div ngClass="['primary big', 'italics']">ngClass Array or Obj</div>

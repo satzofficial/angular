@@ -1,27 +1,35 @@
-<p>home works!</p>
-<header>
-    <nav>
-      <ul>
-        <li>
-          Menu
-        </li>
-        <li>
-          Tools
-        </li>
+
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+  <nav>
+    <a routerLink="home" routerLinkActive="active">Home</a>&leftrightharpoons;
+    <a routerLink="about">About</a>&sc;
+    <a routerLink="dashboard">Dashboard</a>&colone;
+  </nav>  
+</div>
+
+<div class="container">
+ 
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" [routerLink]="['/']"><strong> {{title}} </strong></a>
+      </div>
+      <ul class="nav navbar-nav">
+          <li><a [routerLink]="['home']">Home</a></li>
+          <li><a [routerLink]="['about']">About</a></li>
+          <li><a [routerLink]="['dashboard']">Dashboard</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
+   
+   <router-outlet></router-outlet>
+   
+  </div>
+
   <div class="container">
-    <h1 [innerText]="title"></h1>
-    {{title}}
-    <h2>Property Binding</h2>
-    <button class="btn btn-primary" [disabled]="isDisabled">I am disabled</button>
-    <div [className]="red">Class Binding</div>
-    <div [className]="'red size20'">Test</div>
-    <div class="red">Normal red</div>
-    <div [className]="getClass()">getClass</div>
-    <div [className]="hasError() ? 'true' : 'false'">Condition operetor</div>
-    <div ngClass="primary big">Simple Text</div>
-    <div ngClass="['primary big', 'italics']">ngClass Array or Obj</div>
+    <router-outlet></router-outlet>    
   </div>
   
