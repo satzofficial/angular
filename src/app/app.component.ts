@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tutorial';
+  title: string = 'TestingAngular';  
+  isDisabled:boolean = true;
+  redSize: string= 'red size20';
+  red: string = 'red';
+  
+  getClass(){
+    return 'SATZ getClass';
+  }
+
+  hasError() {
+    return false
+  }
 }
